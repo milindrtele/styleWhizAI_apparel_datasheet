@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-const baseFolder = path.join("./downloaded_images/"); // The parent folder containing all subfolders
+const baseFolder = path.join("./new_downloaded/downloaded_images/"); // The parent folder containing all subfolders
 const imageExtensions = [".jpg", ".jpeg", ".png", ".gif", ".bmp"];
 const prefix = "img_";
 
@@ -12,7 +12,7 @@ fs.readdir(baseFolder, (err, folders) => {
   }
 
   folders.forEach((folderName) => {
-    if (folderName != "arabic_apparels") return; // Skip hidden folders
+    if (folderName.startsWith(".")) return; // only skip hidden folders return; // Skip hidden folders
 
     const subfolderPath = path.join(baseFolder, folderName);
 

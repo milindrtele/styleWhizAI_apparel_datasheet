@@ -4,12 +4,12 @@ import { GoogleGenAI } from "@google/genai";
 
 // CONFIG
 const API_KEY = "AIzaSyDE-_tcLiKuKvJVvV23bEySm7fqnsh-P9M"; // 🔑 Replace with your API Key
-const IMAGE_FOLDER = "./downloaded_images/arabic_apparels"; // 📂 Folder containing images
-const OUTPUT_FILE = "./responses.csv";
+const IMAGE_FOLDER = "./all_images"; // 📂 Folder containing images
+const OUTPUT_FILE = "./new_images.csv";
 const WAIT_TIME_MS = 7000;
 
 const ai = new GoogleGenAI({
-  apiKey: "AIzaSyD9Be9zyRd8c1YG9WwiP6iqVLQLCxdSV5s", // replace with your real key
+  apiKey: "AIzaSyDUI12FATIrFE4ysz_NkGy2eXYTOetG0SY", // replace with your real key
 });
 //const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
@@ -32,7 +32,7 @@ async function processImage(filePath) {
 
   try {
     const result = await ai.models.generateContent({
-      model: "gemini-2.5-flash-preview-04-17",
+      model: "gemini-2.5-flash",
       contents: {
         role: "user",
         parts: [
