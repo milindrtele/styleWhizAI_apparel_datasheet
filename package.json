@@ -9,7 +9,9 @@
     "fs": "^0.0.1-security",
     "mongodb": "^6.16.0",
     "path": "^0.12.7",
-    "puppeteer": "^24.10.1"
+    "puppeteer": "^24.10.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "type": "module"
 }

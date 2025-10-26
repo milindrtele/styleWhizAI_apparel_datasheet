@@ -3,13 +3,13 @@ import path from "path";
 import { GoogleGenAI } from "@google/genai";
 
 // CONFIG
-const API_KEY = "AIzaSyDE-_tcLiKuKvJVvV23bEySm7fqnsh-P9M"; // 🔑 Replace with your API Key
-const IMAGE_FOLDER = "./all_images"; // 📂 Folder containing images
-const OUTPUT_FILE = "./new_images_2.csv";
-const WAIT_TIME_MS = 7000;
+const API_KEY = "AIzaSyAvntWyf79ZmDlGpW6_aw02I8CtJv5NGd8"; // 🔑 Replace with your API Key
+const IMAGE_FOLDER = "./500_1000"; // 📂 Folder containing images
+const OUTPUT_FILE = "./new_images_500_1000.csv";
+const WAIT_TIME_MS = 100;
 
 const ai = new GoogleGenAI({
-  apiKey: "AIzaSyDUI12FATIrFE4ysz_NkGy2eXYTOetG0SY", // replace with your real key
+  apiKey: "AIzaSyAvntWyf79ZmDlGpW6_aw02I8CtJv5NGd8", // replace with your real key
 });
 //const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
