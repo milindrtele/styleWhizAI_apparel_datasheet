@@ -6,7 +6,7 @@ import path from "path";
 const uri =
   "mongodb+srv://metavian:1ifpk91paqLW5EpC@cluster0.xy7uk.mongodb.net/stylewhizAi_db?retryWrites=true&w=majority&appName=Cluster0";
 const dbName = "stylewhizAi_db";
-const collectionName = "new_apparels_2";
+const collectionName = "apparels";
 
 // Cloudinary base path
 const cloudinaryBase =
@@ -58,10 +58,12 @@ async function importCSV() {
       // "./new apparel datasheet with arabic apparels.csv"
     );
 
+    console.log(jsonArray.length);
+
     const parsedData = jsonArray
       // .map((item, index) => ({ item, index }))
       // // .filter(({ index }) => index + 1 > 140)
-      .map(({ item, index }) => {
+      .map((item, index) => {
         const apparelId = item["Apparel ID"];
         return {
           ApparelID: apparelId,
@@ -120,8 +122,7 @@ async function importCSV() {
     // });
 
     const result = await collection.insertMany(parsedData);
-    // console.log(`${result.insertedCount} documents inserted.`);
-    console.log("adfasdfasdfasdf");
+    console.log(`${result.insertedCount} documents inserted.`);
   } catch (err) {
     console.error("Error:", err);
   } finally {
